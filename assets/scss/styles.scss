@@ -1,0 +1,12 @@
+@import "config/variables";
+@import "config/reset.scss";
+@import "main.scss";
+
+//partials
+@import "partials/header.scss";
+@import "partials/menu.scss";
+@import "partials/footer.scss";
+@import "partials/forms.scss";
+
+//page
+@import "page/home.scss";

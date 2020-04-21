@@ -1,0 +1,9 @@
+extends layouts/main
+
+block content
+    .form__edit
+        form(action=routes.editBlog(blog.id),method="post")
+            input(tpye="text",placeholder="Title",name="title",value=blog.title)
+            textarea(name="post",placeholder="Sharing your experience")=blog.post
+            input(type="submit", value="Edit Your Post")
+        a.form-container__delete__link(href=routes.deleteBlog(blog.id)) Delete!

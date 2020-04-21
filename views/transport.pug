@@ -1,0 +1,12 @@
+extends layouts/main
+
+block content
+    ul.transport__list
+        li
+            a(href=`/transport${routes.bus}`) Bus🚌
+        li
+            a(href=`/transport${routes.metro}`) Metro🚉
+        li
+            a(href=`/transport${routes.taxi}`) Taxi🚕
+        li
+            a(href=`/transport${routes.moretrans}`) Other transport!

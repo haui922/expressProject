@@ -1,0 +1,6 @@
+mixin modelBlock(blog={})
+    .modelBlock
+        a(href=routes.blogDetail(blog.id))
+            model.modelBlock__thumnail(src=blog.fileUrl)
+            h2.modelBlock__title=blog.title
+            h6.modelBlock__post=blog.post

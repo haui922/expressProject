@@ -1,0 +1,38 @@
+.header {
+  margin: 30px 0px 13px 0px;
+  padding-bottom: 5px;
+  font-size: 25px;
+  .header_total {
+    padding: 5px 0px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 2000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    .header__logo {
+      float: left;
+      margin-left: 30px;
+      align-content: center;
+      .header__logo__title {
+        margin-left: 5px;
+        color: black;
+      }
+    }
+    .header__column {
+      ul {
+        float: right !important;
+        display: flex;
+
+        text-transform: uppercase;
+        color: black;
+        :first-child {
+          margin-right: 5px;
+        }
+        :last-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

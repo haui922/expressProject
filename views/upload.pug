@@ -1,0 +1,10 @@
+extends layouts/main
+
+block content
+    .form-blog__container
+        form(action=`/blog${routes.upload}`,method="post",enctype="multipart/form-data")
+            label(for="file") Img File
+            input(type="file",id="file", name="blogFile", required=true, accept="blog/*")
+            input(type="text", name="title", placeholder="title",required=true)
+            textarea(name="post", placeholder="Sharing your experience",required=true)
+            input(type="submit",value="Post!")
