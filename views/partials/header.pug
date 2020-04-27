@@ -1,12 +1,21 @@
 header.header
     .header_total
         .header__logo
-            i.fas.fa-volleyball-ball
-            span.header__logo__title
-                a(href=routes.home) #{siteName}
+                a(href=routes.home) 
+                    i.fas.fa-volleyball-ball Alleys
+        .header__menu
+            ul.menu
+                li
+                    a(href=routes.travel) Travel
+                li
+                    a(href=routes.transport) Transportation
+                li
+                    a(href=routes.blog) Blog
+                li
+                    a(href=routes.course) Course
         .header__column
-            ul
-                if !user.isAuthenticated
+            ul.user   
+                if !user
                     li
                         a(href=routes.login) Login
                     li

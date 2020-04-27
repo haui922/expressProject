@@ -1,9 +1,13 @@
 //global
 const HOME = "/";
+const INFO = "/info";
 const JOIN = "/join";
 const LOGIN = "/login";
 const LOGOUT = "/logout";
 const SEARCH = "/search";
+
+//travel
+const TRAVEL = "/travel";
 const FOOD = "/food"; //대표음식
 const MARKET = "/market"; //시장포함
 const NIGHTSCAPE = "/nightscape"; //서울 야경명소
@@ -25,7 +29,10 @@ const CHANGE_PASSWORD = "/change-password";
 
 //course
 const COURSE = "/course";
-const EDIT_COURSE = "/edit-course";
+const CREATE_COURSE = "/create-course";
+const COURSE_DETAIL = "/:id";
+const COURSE_EDIT = "/:id/course-edit";
+const COURSE_DELETE = "/:id/course-delete";
 
 //blog??posting??
 const BLOG = "/blog";
@@ -37,12 +44,14 @@ const DELETE_BLOG = "/:id/delete";
 const routes = {
   //global
   home: HOME,
+  info: INFO,
   join: JOIN,
   login: LOGIN,
   logout: LOGOUT,
   search: SEARCH,
 
   //category
+  travel: TRAVEL,
   food: FOOD,
   market: MARKET,
   nightscape: NIGHTSCAPE,
@@ -68,10 +77,6 @@ const routes = {
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
 
-  //course
-  course: COURSE,
-  editCourse: EDIT_COURSE,
-
   //blog
   blog: BLOG,
   upload: UPLOAD,
@@ -96,6 +101,13 @@ const routes = {
       return DELETE_BLOG;
     }
   },
+
+  //course
+  course: COURSE,
+  createcourse: CREATE_COURSE,
+  detailcourse: COURSE_DETAIL,
+  editcourse: COURSE_EDIT,
+  deletecourse: COURSE_DELETE,
 };
 
 export default routes;

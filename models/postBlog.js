@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const postBlogSchema = new mongoose.Schema({
-  img: {
+  fileUrl: {
     type: String,
     required: "File is required",
   },
@@ -26,6 +26,6 @@ const postBlogSchema = new mongoose.Schema({
   ],
 });
 
-const Blogmodel = mongoose.model("postBlog", postBlogSchema);
+const model = mongoose.model("postBlog", postBlogSchema);
 
-export default Blogmodel;
+export default model;

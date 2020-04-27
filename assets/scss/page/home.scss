@@ -1,33 +1,34 @@
 .home__content {
-  display: block;
-  width: 33%;
-  .main__img {
-    img {
-      margin-bottom: 20px;
-      margin-top: 20px;
-      border-radius: 100px;
-      width: 700px;
-      height: 350px;
+  width: 100%;
+  text-align: center;
+  .main__info {
+    align-self: center;
+    padding-bottom: 20px;
+    .main__title {
+      font-weight: bold;
+      font-size: xx-large;
+    }
+    .main__subtitle {
+      font-size: xx-large;
+      a:link {
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+      }
+      p {
+        margin-top: 5px;
+        font-size: large;
+      }
+    }
+    div:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
-  .main__transport {
-    margin-bottom: 20px;
+  .main__pic {
     img {
-      width: 719px;
-      height: 300px;
+      width: 1600px;
+      height: 800px;
     }
-  }
-  .main__blog {
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    min-height: 70vh;
-  }
-  .link__title {
-    font-size: 25px;
-  }
-  .link__content {
-    font-size: 15px;
   }
 }

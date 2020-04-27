@@ -1,0 +1,40 @@
+.blog__detail {
+  ul.link__post {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: right;
+    margin-right: 70px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 900;
+    text-transform: uppercase;
+    .list__link {
+      margin-right: 10px;
+    }
+  }
+  .blog__content {
+    margin-left: 150px;
+    .blog__pic {
+      img {
+        margin-top: 5px;
+        width: 1200px;
+        height: 400px;
+      }
+    }
+    .blog__header {
+      font-size: x-large;
+      font-weight: 700;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    .blog__content {
+      width: 700px;
+      margin-left: 0px;
+      overflow: hidden;
+      word-wrap: break-word;
+      font-size: large;
+      font-weight: 500;
+    }
+  }
+}

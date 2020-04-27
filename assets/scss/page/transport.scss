@@ -1,0 +1,59 @@
+.transport__main {
+  margin-top: 20px;
+  .bus_info {
+    justify-content: left;
+    margin-left: 300px;
+    .bus_title {
+      font-weight: bold;
+      font-size: xx-large;
+    }
+    .bus_content {
+      font-weight: 500;
+      font-size: large;
+    }
+    img.bus_pic {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .subway_info {
+    text-align: right;
+    margin-right: 300px;
+    .subway_title {
+      font-weight: bold;
+      font-size: xx-large;
+    }
+    .subway_content {
+      font-weight: 500;
+      font-size: large;
+    }
+    img.subway_pic {
+      justify-content: right;
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .taxi_info {
+    justify-content: left;
+    margin-left: 300px;
+    .taxi_title {
+      font-weight: bold;
+      font-size: xx-large;
+    }
+    .taxi_content {
+      font-weight: 500;
+      font-size: large;
+    }
+    img.taxi_pic {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .other_info {
+    text-align: center;
+    margin-top: 30px;
+  }
+  li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

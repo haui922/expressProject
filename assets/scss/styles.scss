@@ -4,9 +4,18 @@
 
 //partials
 @import "partials/header.scss";
-@import "partials/menu.scss";
 @import "partials/footer.scss";
 @import "partials/forms.scss";
+@import "partials/transportnav.scss";
+@import "partials/travelnav.scss";
+@import "partials/coursenav.scss";
 
 //page
 @import "page/home.scss";
+@import "page/transport.scss";
+@import "page/blog.scss";
+@import "page/join.scss";
+@import "page/blogdetail.scss";
+
+//mixin
+@import "mixin/modelBlock.scss";

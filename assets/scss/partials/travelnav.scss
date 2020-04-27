@@ -1,0 +1,22 @@
+.travel__bar__nav {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li {
+    font-size: large;
+    font-weight: 500;
+  }
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+}

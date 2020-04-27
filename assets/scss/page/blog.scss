@@ -1,0 +1,40 @@
+.blog__main {
+  .post__link {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    a.upload_link {
+      justify-self: end;
+      text-align: right;
+      margin-right: 70px;
+      font-size: large;
+      font-weight: 900;
+    }
+  }
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-gap: 30px;
+    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    .modelBlock:first-child,
+    .modelBlock:nth-child(2) {
+      grid-column: span 1;
+    }
+    .modelBlock:nth-child(3),
+    .modelBlock:nth-child(4),
+    .modelBlock:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+}

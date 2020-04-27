@@ -1,38 +1,75 @@
-.header {
-  margin: 30px 0px 13px 0px;
-  padding-bottom: 5px;
-  font-size: 25px;
-  .header_total {
-    padding: 5px 0px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 2000px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.header_total {
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #606060;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .header__logo {
+    margin-left: 70px;
+    font-size: 40px;
     align-items: center;
-    .header__logo {
-      float: left;
-      margin-left: 30px;
-      align-content: center;
-      .header__logo__title {
-        margin-left: 5px;
-        color: black;
-      }
+    a:link {
+      text-decoration: none;
+      color: white;
     }
-    .header__column {
-      ul {
-        float: right !important;
-        display: flex;
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &:nth-child(2) {
+    width: 100%;
+    justify-self: center;
+  }
 
-        text-transform: uppercase;
-        color: black;
-        :first-child {
-          margin-right: 5px;
-        }
-        :last-child {
-          margin-right: 20px;
-        }
-      }
+  &:last-child {
+    justify-self: end;
+  }
+
+  ul.menu {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+    font-size: large;
+    text-transform: uppercase;
+
+    li:not(:last-child) {
+      margin-right: 17px;
+    }
+    a:link {
+      text-decoration: none;
+      color: white;
+    }
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  ul.user {
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    text-transform: uppercase;
+    float: right;
+    a:link {
+      text-decoration: none;
+      color: white;
+    }
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
+    li:last-child {
+      margin-right: 70px;
     }
   }
 }

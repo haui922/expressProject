@@ -2,13 +2,15 @@ extends layouts/main
 include mixins/modelBlock
 
 block content
-    .blogs
-        each item in Uploadblog
-            +modelBlock({
-                id:item.id,
-                blogFile: item.img,
-                title:item.title,
-                post:item.post,
-            })
-    a(href=`/blog${routes.upload}`) Go To Post!
-        
+    .blog__main
+        .post__link
+            a.upload_link(href=`/blog${routes.upload}`) Go To Post!
+        .blogs
+            each item in blogs
+                +modelBlock({
+                    id:item.id,
+                    blogFile: item.fileUrl,
+                    title:item.title,
+                    post:item.post,
+                })
+                

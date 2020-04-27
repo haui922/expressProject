@@ -3,14 +3,23 @@ import morgan from "morgan";
 import helmet from "helmet";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import passport from "passport";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+import mongoose from "mongoose";
 import { localsMiddleware } from "./middlewares";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import transportRouter from "./routers/transportRouter";
-import routes from "./routes";
+import courseRouter from "./routers/courseRouter";
+import travelRouter from "./routers/travelRouter";
 import blogRouter from "./routers/blogRouter";
+import routes from "./routes";
+
+import "./passport";
 
 const app = express();
+const cookieStore = MongoStore(session);
 
 app.use(helmet());
 app.set("view engine", "pug");
@@ -20,13 +29,25 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
+app.use(
+  session({
+    secret: process.env.COOKIE_SECRET,
+    resave: true,
+    saveUninitialized: false,
+    store: new cookieStore({ mongooseConnection: mongoose.connection }),
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static("views"));
 
 app.use(localsMiddleware);
 app.use(routes.home, globalRouter);
 app.use(routes.transport, transportRouter);
+app.use(routes.travel, travelRouter);
 app.use(routes.blog, blogRouter);
+
 app.use(routes.user, userRouter);
 
 export default app;

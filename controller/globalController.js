@@ -1,43 +1,32 @@
 import routes from "../routes";
-import Blogmodel from "../models/postBlog";
+import postBlog from "../models/postBlog";
 
 export const home = (req, res) => {
   res.render("home", { pageTitle: "HOME" });
 };
 
-export const search = (req, res) => {
-  res.render("search", { pageTitle: "Search" });
+export const info = (req, res) => {
+  res.render("info", { pageTitle: "INFOMATION" });
+};
+
+export const travel = (req, res) => {
+  res.render("travel");
+};
+
+export const course = (req, res) => {
+  res.render("course");
 };
 
 export const transport = (req, res) => {
   res.render("transport", { pageTitle: "Transport" });
 };
 
-export const food = (req, res) => {
-  res.render("food", { pageTitle: "Food" });
-};
-
-export const market = (req, res) => {
-  res.render("market", { pageTitle: "Market" });
-};
-
-export const nightscape = (req, res) => {
-  res.render("nightscape", { pageTitle: "Nightscape" });
-};
-export const street = (req, res) => {
-  res.render("street", { pageTitle: "Street" });
-};
-
-export const spot = (req, res) => {
-  res.render("spot", { pageTitle: "Spot" });
-};
-
 export const blog = async (req, res) => {
   try {
-    const Uploadblog = await Blogmodel.find({});
-    res.render("blog", { pageTitle: "blog", Uploadblog });
+    const blogs = await postBlog.find({}).sort({ _id: -1 });
+    res.render("blog", { pageTitle: "blog", blogs });
   } catch (error) {
     console.log(error);
-    res.render("blog", { pageTitle: "blog", Uploadblog: [] });
+    res.render("blog", { pageTitle: "blog", blogs: [] });
   }
 };

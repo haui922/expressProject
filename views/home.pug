@@ -2,16 +2,13 @@ extends layouts/main
 
 block content
     .home__content
-        .main__img
-            img(src="img/logo.jpg")
-        .main__transport
-            a.transport__link(href=routes.transport) 
-                img(src="img/logo.jpg")
-                .link__content
-                    span If you want to know about Seoul transport Click here😊
-        .main__blog
-            a.blog__link(href=routes.blog) 
-                .link__title 
-                    span BLOG
-                .link__content
-                    span sharing your travel experience! 😁
+        .main__info
+            .main__title 
+                strong Hello Travelers!
+            .main__subtitle
+                strong Welcome To Korea.
+                a(href=routes.info)
+                    p If you want to know about Korea Click Here👈
+        .main__pic
+            img(src="img/mainpage/main.jpg")
+    

@@ -1,12 +1,23 @@
 extends layouts/main
 
 block content
-    ul.transport__list
-        li
-            a(href=`/transport${routes.bus}`) Bus🚌
-        li
-            a(href=`/transport${routes.metro}`) Metro🚉
-        li
-            a(href=`/transport${routes.taxi}`) Taxi🚕
-        li
-            a(href=`/transport${routes.moretrans}`) Other transport!
+    include nav/transportnav
+    .transport__main
+        .bus_info
+            p.bus_title Bus
+            p.bus_content This is bus content 
+            img.bus_pic(src="img/logo.jpg")
+
+        .subway_info
+            p.subway_title Subway
+            p.subway_content This is subway content
+            img.subway_pic(src="img/logo.jpg")
+
+        .taxi_info
+            p.taxi_title Taxi
+            p.taxi_content This is taxi content
+            img.taxi_pic(src="img/logo.jpg")
+
+        .other_info
+            p.other_title 그외 다른것들도 많습니다. 
+

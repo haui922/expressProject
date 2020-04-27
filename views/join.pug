@@ -1,6 +1,10 @@
 extends layouts/main
 
 block content
+    .join__title
+        p.join-main__title Hello!
+        p.join-main__subtitle If You Use Course and Blog, Please Sign Up
+
     .form-container
         form(action=routes.join,method="post")
             input(type="text", name="name",placeholder="Full Name",required=true)
